@@ -1,21 +1,4 @@
 /* Reset */
-h2 {
-  font-size: 3rem;
-  margin-bottom: 30px;
-  color: #ff1493;
-  text-shadow: 2px 2px yellow;
-}
-
-.elder-card,
-.contact-box {
-  background: white;
-  border: 5px dotted orange;
-  border-radius: 25px;
-  padding: 30px;
-  font-size: 1.3rem;
-  line-height: 2;
-  box-shadow: 0 0 20px rgba(255,165,0,0.5);
-}
 
 .blessing,
 .footer-blessing {

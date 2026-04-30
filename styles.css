@@ -1,103 +1,78 @@
 /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #ff1493;
+  text-shadow: 2px 2px yellow;
 }
 
-/* Base */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+.elder-card,
+.contact-box {
+  background: white;
+  border: 5px dotted orange;
+  border-radius: 25px;
+  padding: 30px;
+  font-size: 1.3rem;
+  line-height: 2;
+  box-shadow: 0 0 20px rgba(255,165,0,0.5);
 }
 
-/* Container */
-.container {
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 0;
+.blessing,
+.footer-blessing {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+  animation: rainbow 3s linear infinite;
 }
 
-/* Hero */
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #0f172a;
-  color: white;
-  text-align: center;
+@keyframes rainbow {
+  0% { color: red; }
+  20% { color: orange; }
+  40% { color: green; }
+  60% { color: blue; }
+  80% { color: purple; }
+  100% { color: red; }
 }
 
-.name {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+/* 星星背景 */
+.sparkles::before,
+.sparkles::after {
+  content: "✨ ✨ ✨ ✨ ✨";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  font-size: 2rem;
+  opacity: 0.7;
 }
 
-.tagline {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+.sparkles::before {
+  top: 40px;
 }
 
-/* Buttons */
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+.sparkles::after {
+  bottom: 40px;
 }
 
-.btn {
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 0.9rem;
-}
-
-.primary-btn {
-  background-color: #38bdf8;
-  color: white;
-}
-
-.secondary-btn {
-  border: 1px solid #38bdf8;
-  color: #38bdf8;
-}
-
-/* About */
-.about {
-  background-color: #f8fafc;
-  text-align: center;
-}
-
-/* Contact */
-.contact {
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.contact a {
-  color: #38bdf8;
-  text-decoration: none;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
+/* 手機版 */
+@media (max-width: 768px) {
   .name {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .tagline {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
-  .hero-buttons {
-    flex-direction: column;
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content {
+    padding: 25px;
   }
 
   .btn {
     width: 100%;
-    text-align: center;
   }
 }
